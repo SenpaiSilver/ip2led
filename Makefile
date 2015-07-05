@@ -2,10 +2,10 @@ NAME=byte2led
 SRC=main.c
 OBJ=$(SRC:.c=.o)
 
-CFLAGS=-Wall -Wextra
+CFLAGS=-Wall -Wextra -lwiringPi -lwiringPiDev
 
 %o:%.c
-	gcc $(CFLAGS) -c $@ -o $< -lwiringPi -lwiringPiDev 
+	gcc $(CFLAGS) -c $@ -o $<
 
 all:	$(NAME)
 

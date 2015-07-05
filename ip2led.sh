@@ -2,6 +2,11 @@
 
 IP_LIST="$(ifconfig eth0 | egrep  -o '192\.168\.1\.([0-9]+)' | sed -r 's/192\.168\.1\.([0-9]+)/\1/')"
 
+if !([ -f "./byte2led" ])
+then
+	make all
+fi
+
 while IFS=' ' read -a IPS; do
 	for ip in "${IPS[@]}"; do
 		if [ $ip != 255 ]; then

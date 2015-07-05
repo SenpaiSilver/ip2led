@@ -13,4 +13,6 @@ You will have to build `byte2led` with the Wiring Pi library by running `make` a
 
 ##byte2led
 
+This program takes a binary string as the first argument then the pins:
+
 Usage: `./byte2led <byte> <data> <clock> <latch>`
